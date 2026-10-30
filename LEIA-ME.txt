@@ -1,0 +1,7 @@
+Cópia offline do site (não precisa de internet nem de Playwright).
+
+Windows: dê duplo clique em abrir.bat
+Mac/Linux: python3 servir.py
+
+Abre em http://localhost:8000. Não abra o index.html direto (file://), o navegador bloqueia os scripts.
+Para publicar em hospedagem, envie o conteúdo desta pasta (index.html, _assets, _footer) para a raiz do site.
