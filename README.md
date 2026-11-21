@@ -1,17 +1,11 @@
-# Site de aniversário 💌
+# Feliz aniversário, Gabi!
 
-Site estático de aniversário com fotos personalizadas, carta em português brasileiro e animações do projeto original.
+Site estático de aniversário com uma colagem de fotos, uma carta e uma entrega animada de rosas.
 
-## Publicação
-Este repositório está configurado para publicação na Vercel. O site usa `index.html` e o diretório `_assets/`, que inclui CSS, JavaScript, imagens, fontes e vídeo estático.
+## Abrir no computador
 
-### Adicionar os arquivos do site
-1. Baixe e extraia `site_aniversario_vercel_pronto.zip` fornecido no ChatGPT.
-2. Neste repositório, clique em **Add file → Upload files**.
-3. Arraste **o conteúdo de dentro** da pasta extraída (incluindo `index.html`, `_assets/` e `vercel.json`), não o ZIP.
-4. Clique em **Commit changes**.
+No Windows, abra `abrir.bat`. No macOS ou Linux, execute `python3 servir.py`. Depois, acesse `http://localhost:8000`.
 
-### Publicar na Vercel
-Acesse [vercel.com/new](https://vercel.com/new), escolha **Import Git Repository** e selecione `Gssgabi/Feliz-anivers-rio-gabi`. Use o diretório raiz padrão e clique em **Deploy**.
+## Publicar na Vercel
 
-> Atenção: este repositório é **público**. As fotos que forem enviadas ficarão visíveis para qualquer pessoa.
+Importe o repositório na Vercel e selecione a raiz como diretório do projeto. Os arquivos usados pelo site estão em `index.html`, `_assets/` e `aniversario/`. O ZIP da versão anterior é um arquivo de referência.
