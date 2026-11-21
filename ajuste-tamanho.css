@@ -1,0 +1,109 @@
+/* Ampliação do conjunto inteiro: as coordenadas de posicoes.css permanecem
+   iguais. Os limites aproveitam as margens transparentes de cada composição. */
+.scene {
+  --scene-space: 96px;
+  grid-template-columns: minmax(0, 1fr);
+  min-height: 62vh;
+  min-height: 62svh;
+  min-height: 62dvh;
+  padding: 36px 0 60px;
+}
+#happy {
+  min-height: 100vh;
+  min-height: 100svh;
+  min-height: 100dvh;
+}
+.artwork { min-width: 0; justify-self: center; }
+.hero-art {
+  width: min(112%, 1480px, calc((100vh - var(--scene-space)) * 1.7932011331));
+  width: min(112%, 1480px, calc((100svh - var(--scene-space)) * 1.7932011331));
+}
+.portrait-art {
+  width: min(104%, 1280px, calc((100vh - var(--scene-space)) * 1.2365415987));
+  width: min(104%, 1280px, calc((100svh - var(--scene-space)) * 1.2365415987));
+}
+.album-art {
+  width: min(102%, 1440px, calc((100vh - var(--scene-space)) * 1.5300859599));
+  width: min(102%, 1440px, calc((100svh - var(--scene-space)) * 1.5300859599));
+}
+.hero-wish {
+  inset-inline: 0;
+  width: auto;
+  margin-inline: auto;
+  max-width: calc(100vw - 24px);
+  height: auto;
+  font-size: clamp(14px, 3.18417062cqw, 26px);
+}
+.next-part { bottom: max(12px, env(safe-area-inset-bottom)); }
+
+/* Em uma tela baixa, o conjunto continua inteiro e a seta ganha espaço. */
+@media (orientation: landscape) and (max-height: 480px) {
+  .scene:not(.scene-letter) {
+    --scene-space: 120px;
+    padding-top: 24px;
+    padding-bottom: 96px;
+  }
+}
+
+/* Mantém a escala da composição em navegadores sem unidades de contêiner. */
+@supports not (font-size: 1cqw) {
+  .word-happy, .word-birthday {
+    font-size: calc(min(112vw, 1480px, calc((100vh - var(--scene-space)) * 1.7932011331)) * 0.1620995261);
+    font-size: calc(min(112vw, 1480px, calc((100svh - var(--scene-space)) * 1.7932011331)) * 0.1620995261);
+  }
+  .hero-wish {
+    font-size: clamp(14px, calc(min(112vw, 1480px, calc((100vh - var(--scene-space)) * 1.7932011331)) * 0.0318417062), 26px);
+    font-size: clamp(14px, calc(min(112vw, 1480px, calc((100svh - var(--scene-space)) * 1.7932011331)) * 0.0318417062), 26px);
+  }
+}
+
+@supports not (aspect-ratio: 1 / 1) {
+  .artwork::before { content: ""; display: block; }
+  .hero-art::before { padding-top: 55.766192733%; }
+  .portrait-art::before { padding-top: 80.870712401%; }
+  .album-art::before { padding-top: 65.355805243%; }
+}
+
+/* O próprio artigo recebe o papel. Sua altura é definida pelos parágrafos,
+   com uma margem interna segura em todas as bordas da folha. */
+.scene-letter {
+  padding: 72px max(1.5vw, calc((100vw - 820px) / 2)) 56px max(8vw, calc((100vw - 820px) / 2));
+  padding-right: max(1.5vw, calc((100vw - 820px) / 2), env(safe-area-inset-right));
+  padding-left: max(calc(8vw + env(safe-area-inset-left)), calc((100vw - 820px) / 2));
+}
+.letter {
+  --letter-pad-top: 96px;
+  --letter-pad-bottom: 96px;
+  --letter-pad-inline: clamp(40px, 10vw, 84px);
+  display: block;
+  width: 100%;
+  max-width: 820px;
+  min-width: 0;
+  height: auto;
+  margin: 0;
+  /* O centro da área clara está em 47,5% da textura, que tem bordas desiguais. */
+  padding: var(--letter-pad-top) calc(var(--letter-pad-inline) + 2.5%) var(--letter-pad-bottom) calc(var(--letter-pad-inline) - 2.5%);
+  background: url("_assets/media/papel-carta.svg") center / 100% 100% no-repeat;
+}
+.letter-copy {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  height: auto;
+  padding: 2px;
+  font-size: clamp(17px, 4.6vw, 24px);
+  line-height: 1.5;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: normal;
+  overflow: hidden;
+}
+.letter-copy p { max-width: 100%; margin: 0; }
+.letter-copy p + p { margin-top: .8em; }
+
+#buque {
+  min-height: 100vh;
+  min-height: 100svh;
+  min-height: 100dvh;
+  padding: 0;
+}

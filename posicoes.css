@@ -1,0 +1,24 @@
+/* Posições extraídas do HTML original. Cada conjunto só recebe um recorte
+   do espaço vazio e uma escala uniforme para caber em sua própria tela. */
+.hero-art { width: min(100%, 1120px, calc(179.32011331svh - 322.77620397px)); aspect-ratio: 1266 / 706; }
+.hero-pin { left: 10%; top: 0%; width: 10.32926241%; height: 23.1684917%; right: auto; bottom: auto; rotate: 28.26117968deg; max-width: none; }
+.hero-birds { left: 53%; top: 8%; width: 27%; height: 48.4%; right: auto; bottom: auto; rotate: -11.81723226deg; max-width: none; }
+.hero-flower { left: 16%; top: 51%; width: 15.8%; height: 22.1%; right: auto; bottom: auto; rotate: -79deg; max-width: none; }
+.word-happy { left: 8.24200237%; top: 13.76278778%; width: max-content; height: 34.838017%; right: auto; bottom: auto; max-width: none; font-size: 16.20995261cqw; scale: 1.45; transform-origin: left 63%; }
+.word-birthday { left: 31%; top: 49%; width: max-content; height: 34.838017%; right: auto; bottom: auto; max-width: none; font-size: 16.20995261cqw; scale: 1.74; transform-origin: left 74%; }
+.hero-wish { left: 1.96682464%; top: 90.73343934%; width: 96.06635071%; height: 5.0113301%; right: auto; bottom: auto; rotate: 0deg; max-width: none; font-size: 3.18417062cqw; line-height: 1.2; }
+.portrait-art { width: min(100%, 1000px, calc(123.65415987svh - 222.57748777px)); aspect-ratio: 758 / 613; }
+.portrait-frame { left: 20.02463931%; top: 15.35081162%; width: 54.14597204%; height: 79.08630498%; right: auto; bottom: auto; rotate: 0deg; max-width: none;  }
+.portrait-heart { left: 61.1027128%; top: 76.61173911%; width: 18.52896862%; height: 22.91184048%; right: auto; bottom: auto; rotate: 13.02523749deg; max-width: none;  }
+.portrait-tag { left: 68.92776176%; top: 33.42288528%; width: 36.45522412%; height: 45.07840112%; right: auto; bottom: auto; rotate: 0deg; max-width: none;  }
+.portrait-camera { left: -1.67383228%; top: 3.09421371%; width: 34.41264397%; height: 42.55266579%; right: auto; bottom: auto; rotate: -16.91282786deg; max-width: none;  }
+.portrait-bunny { left: -4.05618378%; top: 44.40222311%; width: 54.98049482%; height: 65.21451398%; right: auto; bottom: auto; rotate: -23.91080984deg; max-width: none;  }
+.portrait-flower { left: 55.91966919%; top: 1.80249741%; width: 36.50188431%; height: 45.13609838%; right: auto; bottom: auto; rotate: 0deg; max-width: none;  }
+.album-art { width: min(100%, 1100px, calc(153.00859599svh - 275.41547278px)); aspect-ratio: 1068 / 698; }
+.polaroid { left: 13.52747905%; top: 14.66265447%; width: 42.83414387%; height: 76.13838538%; right: auto; bottom: auto; rotate: -12.79835254deg; max-width: none;  }
+.album-envelope { left: -7.57887523%; top: -1.61903855%; width: 34.70365889%; height: 53.09958123%; right: auto; bottom: auto; rotate: 13.88556717deg; max-width: none;  }
+.album-purse { left: 75.28186687%; top: 57.87497871%; width: 29.00661083%; height: 44.38260797%; right: auto; bottom: auto; rotate: 15.57368282deg; max-width: none;  }
+.heart-collage { left: 38.50832478%; top: -19.38271044%; width: 74.08506926%; height: 113.35652431%; right: auto; bottom: auto; rotate: 0deg; max-width: none;  }
+.letter-clip { left: 4.96206132%; top: 9.66954660%; bottom: auto; width: 45.30279941%; height: auto; right: auto; translate: -50% -50%; rotate: -33.97384477deg; }
+.letter-rose { left: 91.10543110%; top: 89.78364252%; bottom: auto; width: 58.03066541%; height: auto; right: auto; translate: -50% -50%; rotate: 0.00000000deg; }
+.letter-copy { z-index: 3; }
