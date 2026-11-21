@@ -1,0 +1,152 @@
+@font-face {
+  font-family: "Lavonia Aniversário";
+  src: url("../_assets/fonts/023ffc03c68df994d8faf90ae9d64ea6.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Alice Aniversário";
+  src: url("../_assets/fonts/d25c2b954383b90c56e37c5dcc8156ae.woff2") format("woff2");
+  font-display: swap;
+}
+
+.entrega {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  display: grid;
+  justify-items: center;
+  padding: clamp(1.5rem, 4vh, 3rem) 1rem clamp(3rem, 9vh, 6rem);
+  background: #000;
+  color: #fff5eb;
+}
+
+.entrega-cena {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: min(100%, 47rem);
+  height: clamp(22rem, 65svh, 38rem);
+  perspective: 950px;
+  perspective-origin: 50% 44%;
+}
+
+.entrega-palco {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  transform-style: preserve-3d;
+  transform: rotateX(var(--inclinar-x, 0deg)) rotateY(var(--inclinar-y, 0deg));
+  transition: transform 360ms ease-out;
+}
+
+.entrega-buque {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  object-fit: contain;
+  mask-image: linear-gradient(#000 92%, transparent);
+}
+
+.entrega-petalas {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  transform-style: preserve-3d;
+}
+
+.entrega-petalas i {
+  position: absolute;
+  top: 19%;
+  left: var(--x);
+  width: var(--s);
+  height: calc(var(--s) * 1.38);
+  border-radius: 70% 35% 65% 35%;
+  background: radial-gradient(at 24% 20%, #de596c, #8f1a2c 59%, #32070c);
+  opacity: 0;
+}
+
+.entrega-dedicatoria {
+  position: relative;
+  margin-top: clamp(.5rem, 2vh, 1.25rem);
+  text-align: center;
+}
+
+.entrega-dedicatoria h2 {
+  margin: 0 0 1.15rem;
+  font: 400 clamp(2.1rem, 6vw, 4.7rem)/1.18 "Lavonia Aniversário", cursive;
+  text-shadow: .04em .06em #501820;
+}
+
+.entrega-rever {
+  border: 1px solid #a57176;
+  border-radius: 2rem;
+  padding: .58em 1.3em;
+  background: #230e13;
+  color: #fff5eb;
+  font: 1rem/1.2 "Alice Aniversário", Georgia, serif;
+  cursor: pointer;
+}
+
+.entrega-rever:hover { background: #431721; }
+
+.entrega-rever:focus-visible {
+  outline: 2px solid #fff5eb;
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .entrega[data-estado="esperando"] .entrega-buque { opacity: 0; }
+
+  .entrega[data-estado="entregando"] .entrega-buque {
+    animation: oferecer-rosas 3.1s cubic-bezier(.22, .57, .27, 1) both;
+  }
+
+  .entrega[data-estado="entregando"] .entrega-petalas i {
+    animation: cair-petala 2.8s var(--t) ease-in-out both;
+  }
+
+  .entrega[data-estado="entregando"] .entrega-dedicatoria h2 {
+    animation: aparecer-dedicatoria .8s 1.1s ease-out both;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .entrega-palco { transform: none; transition: none; }
+  .entrega-rever { display: none; }
+}
+
+@keyframes oferecer-rosas {
+  0% {
+    opacity: 0;
+    transform: translate3d(104%, 33%, -390px) rotateY(-34deg) rotateZ(21deg);
+  }
+  20% { opacity: 1; }
+  69% {
+    transform: translate3d(0, -1.5%, 35px) rotateY(3deg) rotateZ(-2deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) rotateY(0) rotateZ(0);
+  }
+}
+
+@keyframes cair-petala {
+  0% {
+    transform: translate3d(-2rem, -2rem, var(--z)) rotate3d(1, 1, 0, 40deg);
+    opacity: 0;
+  }
+  30% { opacity: .86; }
+  100% {
+    transform: translate3d(2.5rem, 17rem, var(--z)) rotate3d(1, 1, 0, 440deg);
+    opacity: 0;
+  }
+}
+
+@keyframes aparecer-dedicatoria {
+  from { opacity: 0; transform: translateY(.5rem); }
+}
